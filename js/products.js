@@ -31,7 +31,7 @@ const STUDIO = {
 
 const CATEGORIES = {
   all:      { label: "全部" },
-  vehicle:  { label: "台灣警車", desc: "Blender 手工建模。收取的是警燈與警用塗裝的製作費，不是販售原車。目前僅有 replace 版本。" },
+  vehicle:  { label: "台灣警車", desc: "收取的是警燈與警用塗裝的製作費，不是販售原車。目前僅有 replace 版本。" },
   eup:      { label: "EUP 警用服飾", desc: "內部均有安裝教學，怕太複雜也可以免費代裝。" },
   plugin:   { label: "警用插件中文翻譯", desc: "收取的是翻譯手工費，不是販售原插件，原插件要自己先下載。左上角字體無法正常顯示，其餘正常。" },
   lighting: { label: "光影", desc: "FiveM 和單機都能用。代買其他工作室的光影可以開工單問；代裝要多加 50 元手續。" },

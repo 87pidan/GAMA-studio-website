@@ -50,12 +50,6 @@ p { margin: 0 0 1em; }
 .hero-desc { max-width: 520px; font-size: 1.05rem; margin: 14px 0 22px; color: #e4ecf8; }
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 0; }
 
-/* 仿遊戲 HUD 的資訊框 */
-.hud { background: var(--hud); border-left: 4px solid var(--hud-blue); padding: 12px 16px; min-width: 250px; font-size: .95rem; backdrop-filter: blur(3px); }
-.hud-row { display: flex; gap: 14px; line-height: 1.9; }
-.hud-row span { color: #9fb6d6; width: 2.5em; flex: none; }
-.hud-row b { font-weight: 600; color: #fff; }
-.hud-on { color: #7cf29a !important; }
 
 /* ---------- 區塊標題：仿遊戲選單標題列 ---------- */
 .bar { display: flex; align-items: center; justify-content: space-between; background: var(--navy); color: #fff; padding: 10px 16px; margin-bottom: 18px; }
@@ -180,7 +174,6 @@ body.modal-open { overflow: hidden; }
 @media (max-width: 800px) {
   .hero { min-height: 380px; }
   .hero-inner { flex-direction: column; align-items: stretch; padding: 48px 0 28px; }
-  .hud { min-width: 0; }
   .group-head .desc { display: none; }
   .modal { padding: 0; }
   .modal-panel { height: 100vh; }

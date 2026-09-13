@@ -35,8 +35,6 @@
     $("#vehicle-desc").textContent = CATEGORIES.vehicle?.desc || "";
     $("#other-desc").textContent = STUDIO.otherDesc || "";
     $("#year").textContent = new Date().getFullYear();
-    $("#hud-name").textContent = STUDIO.name;
-    $("#hud-count").textContent = vehicles().length;
     $("#poster-name").textContent = STUDIO.name;
     if (STUDIO.heroImage) $("#hero-img").src = STUDIO.heroImage;
 
