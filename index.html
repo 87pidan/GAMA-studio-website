@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>善武工作室 · 台灣警車</title>
+  <meta name="description" content="善武工作室自製的 GTA V 台灣警車模型展示。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23163a6b'/%3E%3Crect y='40' width='64' height='8' fill='%23c8102e'/%3E%3Ctext x='32' y='34' font-size='26' font-weight='700' text-anchor='middle' fill='%23fff' font-family='sans-serif'%3E武%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="logo" href="#top"><span class="logo-mark">武</span><span id="brand-name">善武工作室</span></a>
+      <nav class="menu" aria-label="頁面選單">
+        <a href="#vehicles">車輛</a>
+        <a href="#others">其他</a>
+        <a href="#pricing">價目表</a>
+        <a href="#how">怎麼買</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </div>
+    <div class="stripe" aria-hidden="true"></div>
+  </header>
+
+  <main id="top">
+
+    <!-- 首圖：主打車輛 -->
+    <section class="hero">
+      <img class="hero-bg" id="hero-img" src="assets/img/tps-refuel.jpg" alt="" aria-hidden="true">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <p class="hero-tag">GTA V · 台灣警車模型</p>
+          <h1 id="intro-title">善武工作室</h1>
+          <p class="hero-desc" id="intro-text"></p>
+          <p class="hero-actions">
+            <a class="btn btn-red" href="#vehicles">看車</a>
+            <a class="btn btn-ghost" id="hero-contact" href="#contact" target="_blank" rel="noopener">Discord 找我們</a>
+          </p>
+        </div>
+        <div class="hud" aria-label="工作室狀態">
+          <div class="hud-row"><span>單位</span><b id="hud-name">善武工作室</b></div>
+          <div class="hud-row"><span>狀態</span><b class="hud-on">值勤中</b></div>
+          <div class="hud-row"><span>車輛</span><b><span id="hud-count">0</span> 台</b></div>
+          <div class="hud-row"><span>交易</span><b>先付款後交貨</b></div>
+          <div class="hud-row"><span>代裝</span><b class="hud-on">免費</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 車輛：主要內容 -->
+    <section class="wrap section" id="vehicles">
+      <div class="bar">
+        <h2>車輛</h2>
+        <span class="bar-right" id="vehicle-count"></span>
+      </div>
+      <p class="lead" id="vehicle-desc"></p>
+      <div class="vgrid" id="vehicle-list"></div>
+    </section>
+
+    <!-- 其他商品：次要，收成一排小清單 -->
+    <section class="wrap section" id="others">
+      <div class="bar">
+        <h2>其他商品與服務</h2>
+        <span class="bar-right" id="other-count"></span>
+      </div>
+      <p class="lead" id="other-desc"></p>
+      <div id="other-list"></div>
+    </section>
+
+    <!-- 價目表 -->
+    <section class="wrap section" id="pricing">
+      <div class="poster">
+        <h2 class="poster-title"><span id="poster-name">善武工作室</span>價目表</h2>
+        <p class="poster-red" id="order-note"></p>
+        <p class="poster-sub" id="pricing-note"></p>
+        <ol class="poster-list" id="price-body"></ol>
+      </div>
+    </section>
+
+    <!-- 怎麼買 -->
+    <section class="wrap section" id="how">
+      <div class="bar"><h2>怎麼買</h2></div>
+      <ol class="steps" id="how-steps"></ol>
+    </section>
+
+    <!-- 常見問題 -->
+    <section class="wrap section" id="faq">
+      <div class="bar"><h2>常見問題</h2></div>
+      <dl class="faq" id="faq-list"></dl>
+    </section>
+
+    <!-- 聯絡 -->
+    <section class="wrap section" id="contact">
+      <div class="bar"><h2>聯絡</h2></div>
+      <p id="contact-text"></p>
+      <ul class="contact-list" id="contact-links"></ul>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="stripe" aria-hidden="true"></div>
+    <div class="wrap foot-inner">
+      <p>© <span id="year"></span> <span id="footer-name">善武工作室</span></p>
+      <p class="foot-note">GTA V、LSPDFR 為各自權利人所有，本站車輛皆為玩家自製模組。</p>
+    </div>
+  </footer>
+
+  <!-- 詳情視窗 -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <div class="modal-head">
+        <span id="modal-cat"></span>
+        <button class="modal-close" type="button" data-close aria-label="關閉">✕</button>
+      </div>
+      <div class="modal-grid">
+        <div class="gallery">
+          <div class="gallery-main">
+            <button class="gallery-nav prev" type="button" id="gallery-prev" aria-label="上一張">‹</button>
+            <img id="gallery-img" alt="">
+            <button class="gallery-nav next" type="button" id="gallery-next" aria-label="下一張">›</button>
+            <span class="gallery-counter" id="gallery-counter"></span>
+          </div>
+          <div class="gallery-thumbs" id="gallery-thumbs" role="tablist" aria-label="圖片"></div>
+        </div>
+
+        <div class="modal-body">
+          <h2 id="modal-title"></h2>
+          <p class="modal-version" id="modal-version"></p>
+          <p class="modal-tagline" id="modal-tagline"></p>
+          <p class="modal-price" id="modal-price"></p>
+
+          <div id="modal-details"></div>
+
+          <div class="modal-section" id="modal-features-wrap">
+            <h3>規格 / 內容</h3>
+            <ul id="modal-features"></ul>
+          </div>
+
+          <div class="modal-section" id="modal-notes-wrap">
+            <h3>注意</h3>
+            <ul id="modal-notes"></ul>
+          </div>
+
+          <div class="modal-actions">
+            <a class="btn btn-red" id="modal-order" href="#contact">我要這台</a>
+            <button class="btn btn-ghost-dark" type="button" id="modal-share">複製連結</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
