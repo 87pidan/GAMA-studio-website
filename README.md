@@ -52,11 +52,23 @@ assets/img/         商品圖片
 
 圖片放到 `assets/img/`，建議寬度 1600px 以內的 JPG。
 
-## 部署到 GitHub Pages
+## 正式網址
 
-1. 把專案 push 到 GitHub。
-2. Repo → Settings → Pages → Source 選 `main` 分支、根目錄。
-3. 幾分鐘後網址會是 `https://<帳號>.github.io/<repo>/`。
+https://87pidan.github.io/GAMA-studio-website/
+
+網站放在 GitHub Pages，電腦關機也會一直在。
+
+## 改完內容怎麼更新上去
+
+改好檔案後，在專案資料夾執行：
+
+```
+git add -A
+git commit -m "更新商品"
+git push
+```
+
+大約一分鐘後正式網址就會更新。（倉庫必須維持公開，免費方案的私人倉庫不能用 Pages。）
 
 ## 功能
 
