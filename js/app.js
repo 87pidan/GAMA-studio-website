@@ -26,7 +26,9 @@
   function renderStatic() {
     document.title = `${STUDIO.name} · 台灣警車`;
     $("#brand-name").textContent = STUDIO.name;
-    $("#intro-title").textContent = STUDIO.name;
+    const title = $("#intro-title");
+    [...title.childNodes].filter((n) => n.nodeType === 3).forEach((n) => n.remove());
+    title.append(STUDIO.name);
     $("#footer-name").textContent = STUDIO.name;
     $("#intro-text").textContent = STUDIO.intro;
     $("#order-note").textContent = STUDIO.orderNote;
@@ -87,6 +89,7 @@
         <h3>${esc(CATEGORIES[k].label)}<small>${CATEGORIES[k].desc ? esc(CATEGORIES[k].desc) : ""}</small></h3>
         <ul class="orows">${items.map((p) => `
           <li><button type="button" class="orow" data-id="${p.id}">
+            ${p.images && p.images.length ? `<img class="orow-thumb" src="${esc(p.images[0])}" alt="" loading="lazy">` : `<span class="orow-thumb noimg"></span>`}
             <span class="orow-name">${esc(p.name)}</span>
             <span class="orow-desc">${esc(p.tagline)}</span>
             <span class="orow-price ${p.price === null ? "ask" : ""}">${priceHtml(p)}</span>

@@ -23,9 +23,9 @@ const STUDIO = {
   orderNote: "採優先付款後交貨",
   pricingNote: "本工作室商品提供免費代裝服務，其餘服務及價格如下",
   contactText: "購買或詢問都在 Discord 開服務單，會有客服人員處理。目前只接受轉帳。",
-  // 第一個聯絡方式會當作「我要買」按鈕的連結。Discord 邀請連結請換成自己的。
+  // 第一個聯絡方式會當作「我要買」按鈕的連結
   contacts: [
-    { label: "Discord", url: "https://discord.gg/your-invite", display: "𝓖𝓐𝓜𝓐善武工作室 伺服器 → 🛎️服務單🛎️" },
+    { label: "Discord", url: "https://discord.gg/wtJyScvXVB", display: "discord.gg/wtJyScvXVB（進去開 🛎️服務單🛎️）" },
   ],
 };
 
@@ -234,7 +234,7 @@ const PRODUCTS = [
     price: 80,
     unit: "包",
     badge: "",
-    images: [],
+    images: ["assets/img/dc/siren-yt.jpg"],
     video: "https://youtu.be/PngJy2MBmBA",
     features: ["警笛包", "ELS 設定檔", "安裝教學"],
     details: ["內部均有安裝教學，如果擔心安裝教學太複雜，我們也有提供免費代裝服務。展示影片請看上方連結。"],
@@ -307,9 +307,9 @@ const PRODUCTS = [
     priceText: "加密 700 / 開源 1300",
     unit: "",
     badge: "",
-    images: [],
+    images: ["assets/img/dc/fivem-rent-1.jpg"],
     features: ["OX 系統，1.10 適用", "含 DC 後台"],
-    details: ["Discord 上有展示影片。"],
+    details: ["圖片為 Discord 展示影片的截圖。"],
     notes: ["此插件是 ESX 架構，QB 或 QBX 不可用。"],
   },
   {
@@ -321,9 +321,9 @@ const PRODUCTS = [
     priceText: "加密 700 / 開源 1600",
     unit: "",
     badge: "",
-    images: [],
+    images: ["assets/img/dc/fivem-admin-panel-1.jpg"],
     features: ["OX 系統，1.10 適用", "天氣同步系統", "換衣服選單"],
-    details: ["Discord 上有展示影片。"],
+    details: ["圖片為 Discord 展示影片的截圖。"],
     notes: ["此插件是 ESX 架構，QB 或 QBX 不可用。"],
   },
   {
@@ -335,9 +335,9 @@ const PRODUCTS = [
     priceText: "加密 200 / 開源 500",
     unit: "",
     badge: "",
-    images: [],
+    images: ["assets/img/dc/fivem-panic-1.jpg"],
     features: ["OX 系統，1.10 適用", "須圖片可提供"],
-    details: ["Discord 上有展示影片。"],
+    details: ["圖片為 Discord 展示影片的截圖。"],
     notes: ["此插件是 ESX 架構，QB 或 QBX 不可用。"],
   },
   {
