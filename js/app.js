@@ -7,6 +7,7 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   const priceHtml = (p) => {
+    if (p.priceText) return `NT$ ${esc(p.priceText)}`;
     if (p.price === null || p.price === undefined) return "價格請洽詢";
     if (p.price === 0) return `<span class="free">免費</span>`;
     return `NT$ ${p.price.toLocaleString("zh-TW")}${p.unit ? `<small>/ ${esc(p.unit)}</small>` : ""}`;
@@ -50,13 +51,17 @@
   }
 
   /* ---------- 車輛（主要） ---------- */
+  const coverHtml = (p) => p.images && p.images.length
+    ? `<img src="${esc(p.images[0])}" alt="" loading="lazy">`
+    : `<div class="noimg"><span>${esc(CATEGORIES[p.category]?.label || "")}</span><b>${esc(p.name)}</b></div>`;
+
   function renderVehicles() {
     const list = vehicles();
     $("#vehicle-count").textContent = `${list.length} 台`;
     $("#vehicle-list").innerHTML = list.map((p) => `
       <button type="button" class="vcard" data-id="${p.id}" aria-label="查看 ${esc(p.name)}">
         <div class="vcard-media">
-          <img src="${esc(p.images[0])}" alt="" loading="lazy">
+          ${coverHtml(p)}
           ${p.images.length > 1 ? `<span class="vcard-count">${p.images.length} 張圖</span>` : ""}
           ${p.badge ? `<span class="vcard-badge">${esc(p.badge)}</span>` : ""}
         </div>
@@ -106,7 +111,9 @@
     price.innerHTML = priceHtml(p);
     price.classList.toggle("ask", p.price === null);
 
-    $("#modal-details").innerHTML = (p.details || []).map((d) => `<p>${esc(d)}</p>`).join("");
+    $("#modal-details").innerHTML =
+      (p.video ? `<p><a href="${esc(p.video)}" target="_blank" rel="noopener">▶ 展示影片</a></p>` : "") +
+      (p.details || []).map((d) => `<p>${esc(d)}</p>`).join("");
     $("#modal-features").innerHTML = (p.features || []).map((f) => `<li>${esc(f)}</li>`).join("");
     $("#modal-features-wrap").hidden = !(p.features && p.features.length);
     $("#modal-notes").innerHTML = (p.notes || []).map((n) => `<li>${esc(n)}</li>`).join("");
@@ -140,7 +147,14 @@
   function renderGallery() {
     const p = state.product, imgs = p.images || [], i = state.index;
     const img = $("#gallery-img");
-    img.src = imgs[i] || ""; img.alt = `${p.name} 圖片 ${i + 1}`;
+    const main = $(".gallery-main");
+    main.querySelector(".noimg")?.remove();
+    if (!imgs.length) {
+      img.removeAttribute("src"); img.hidden = true;
+      main.insertAdjacentHTML("beforeend", `<div class="noimg big"><span>${esc(CATEGORIES[p.category]?.label || "")}</span><b>${esc(p.name)}</b><small>Discord 上沒有圖片${p.video ? "，有展示影片" : ""}</small></div>`);
+    } else {
+      img.hidden = false; img.src = imgs[i]; img.alt = `${p.name} 圖片 ${i + 1}`;
+    }
     $("#gallery-counter").textContent = imgs.length > 1 ? `${i + 1} / ${imgs.length}` : "";
     $("#gallery-prev").disabled = imgs.length <= 1;
     $("#gallery-next").disabled = imgs.length <= 1;

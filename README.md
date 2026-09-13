@@ -50,7 +50,7 @@ assets/img/         商品圖片
 },
 ```
 
-圖片放到 `assets/img/`，建議寬度 1600px 以內的 JPG。
+圖片放到 `assets/img/dc/`，建議寬度 1600px 以內的 JPG。改完可以執行 `node check.js` 檢查圖片路徑跟分類有沒有打錯。
 
 ## 正式網址
 
