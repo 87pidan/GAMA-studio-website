@@ -240,3 +240,8 @@ body.modal-open { overflow: hidden; }
 .noimg.big b { font-size: 1.6rem; }
 .orow-thumb { width: 64px; aspect-ratio: 16/10; object-fit: cover; background: #dfe3e8; }
 .orow-thumb.noimg { min-height: 0; padding: 0; border-left: 3px solid var(--red); }
+
+/* 影片：詳情視窗直接播放、清單縮圖加播放記號 */
+.gallery-video { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); width: 100%; height: auto; aspect-ratio: 16 / 9; max-height: 100%; border: 0; background: #000; }
+.orow-thumb.vthumb { display: grid; place-items: center; background-color: #000; background-size: cover; background-position: center; }
+.orow-thumb.vthumb i { font-style: normal; font-size: .65rem; color: #fff; background: var(--red); width: 24px; height: 17px; border-radius: 4px; display: grid; place-items: center; }

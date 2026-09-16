@@ -19,6 +19,12 @@
     clearTimeout(toastTimer); toastTimer = setTimeout(() => (el.hidden = true), 2000);
   };
 
+  // 從 YouTube 網址取出影片 ID（youtu.be/ID、watch?v=ID、embed/ID 都可以）
+  const youtubeId = (url) => {
+    const m = String(url || "").match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([\w-]{11})/);
+    return m ? m[1] : null;
+  };
+
   const vehicles = () => PRODUCTS.filter((p) => p.category === "vehicle");
   const others = () => PRODUCTS.filter((p) => p.category !== "vehicle");
 
@@ -89,7 +95,11 @@
         <h3>${esc(CATEGORIES[k].label)}<small>${CATEGORIES[k].desc ? esc(CATEGORIES[k].desc) : ""}</small></h3>
         <ul class="orows">${items.map((p) => `
           <li><button type="button" class="orow" data-id="${p.id}">
-            ${p.images && p.images.length ? `<img class="orow-thumb" src="${esc(p.images[0])}" alt="" loading="lazy">` : `<span class="orow-thumb noimg"></span>`}
+            ${p.images && p.images.length
+              ? `<img class="orow-thumb" src="${esc(p.images[0])}" alt="" loading="lazy">`
+              : youtubeId(p.video)
+                ? `<span class="orow-thumb vthumb" style="background-image:url('https://i.ytimg.com/vi/${youtubeId(p.video)}/mqdefault.jpg')"><i>▶</i></span>`
+                : `<span class="orow-thumb noimg"></span>`}
             <span class="orow-name">${esc(p.name)}</span>
             <span class="orow-desc">${esc(p.tagline)}</span>
             <span class="orow-price ${p.price === null ? "ask" : ""}">${priceHtml(p)}</span>
@@ -113,7 +123,7 @@
     price.classList.toggle("ask", p.price === null);
 
     $("#modal-details").innerHTML =
-      (p.video ? `<p><a href="${esc(p.video)}" target="_blank" rel="noopener">▶ 展示影片</a></p>` : "") +
+      (p.video ? `<p><a href="${esc(p.video)}" target="_blank" rel="noopener">▶ 在 YouTube 開啟展示影片</a></p>` : "") +
       (p.details || []).map((d) => `<p>${esc(d)}</p>`).join("");
     $("#modal-features").innerHTML = (p.features || []).map((f) => `<li>${esc(f)}</li>`).join("");
     $("#modal-features-wrap").hidden = !(p.features && p.features.length);
@@ -139,6 +149,7 @@
     const m = $("#modal");
     if (m.hidden) return;
     m.hidden = true;
+    $(".gallery-main .gallery-video")?.remove(); // 拿掉播放器，影片才會停
     document.body.classList.remove("modal-open");
     state.product = null;
     if (state.lastFocus?.focus) state.lastFocus.focus({ preventScroll: true });
@@ -149,8 +160,12 @@
     const p = state.product, imgs = p.images || [], i = state.index;
     const img = $("#gallery-img");
     const main = $(".gallery-main");
-    main.querySelector(".noimg")?.remove();
-    if (!imgs.length) {
+    main.querySelectorAll(".noimg, .gallery-video").forEach((el) => el.remove());
+    const yt = youtubeId(p.video);
+    if (!imgs.length && yt) {
+      img.removeAttribute("src"); img.hidden = true;
+      main.insertAdjacentHTML("beforeend", `<iframe class="gallery-video" src="https://www.youtube-nocookie.com/embed/${yt}?rel=0" title="${esc(p.name)} 展示影片" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`);
+    } else if (!imgs.length) {
       img.removeAttribute("src"); img.hidden = true;
       main.insertAdjacentHTML("beforeend", `<div class="noimg big"><span>${esc(CATEGORIES[p.category]?.label || "")}</span><b>${esc(p.name)}</b><small>Discord 上沒有圖片${p.video ? "，有展示影片" : ""}</small></div>`);
     } else {
