@@ -187,7 +187,7 @@ textarea { resize: vertical; min-height: 60px; line-height: 1.65; }
 .mark::before { content: "● "; }
 .prow-tools { display: flex; gap: 6px; align-items: center; }
 .ph { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(135deg, var(--navy-deep), var(--navy)); }
-.ph img { width: 40%; max-width: 72px; aspect-ratio: 1; border-radius: 50%; opacity: .45; }
+.ph > img { width: 34%; max-width: 56px; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .85); box-shadow: 0 0 0 2px var(--red); }
 
 /* ---------- 商品編輯 ---------- */
 .ed-head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
@@ -243,7 +243,7 @@ textarea { resize: vertical; min-height: 60px; line-height: 1.65; }
 .stepno { flex: none; width: 32px; height: 32px; display: grid; place-items: center; background: var(--navy); color: #fff; font-family: var(--font-en); font-weight: 700; font-size: 1.1rem; margin-top: 6px; }
 .elist .stepno ~ .erow-tools { padding-top: 6px; }
 .ptable { margin-bottom: 14px; }
-.ptable-head, .ptable-row { display: grid; grid-template-columns: minmax(0, 1fr) 130px 100px auto; gap: 8px; align-items: center; }
+.ptable-head, .ptable-row { display: grid; grid-template-columns: minmax(0, 1fr) 130px 100px 108px; gap: 8px; align-items: center; }
 .ptable-head { font-weight: 700; font-size: .85rem; color: var(--ink-2); padding: 0 0 6px; }
 .ptable-row { padding: 5px 0; }
 .row-tools { display: flex; gap: 4px; }
@@ -280,6 +280,9 @@ textarea { resize: vertical; min-height: 60px; line-height: 1.65; }
   .f-row2 { grid-template-columns: 1fr; }
   .toolbar-r, .toolbar-r input, .toolbar-r select { width: 100%; }
   .toolbar > .a-btn { width: 100%; }
+  .group-head { align-items: flex-start; }
+  .group-head h2 { display: block; }
+  .group-head h2 small { display: block; }
   .ed-head .ed-head-save { display: none; }
   .ed-bar { display: flex; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 10px 12px; background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 18px rgba(10, 29, 58, .1); }
   .ed-bar .a-btn { flex: 1; min-height: 44px; }

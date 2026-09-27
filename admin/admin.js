@@ -133,7 +133,8 @@
     try { files = await idb.all(); } catch (e) { return; }
     const used = usedPaths();
     for (const f of files) {
-      if (used.has(f.path)) S.blobUrls[f.path] = URL.createObjectURL(f.blob);
+      const expired = f.publishedAt && Date.now() - f.publishedAt > 10 * 60 * 1000;
+      if (used.has(f.path) && !expired) S.blobUrls[f.path] = URL.createObjectURL(f.blob);
       else idb.del(f.path).catch(() => {});
     }
   }
@@ -1156,8 +1157,11 @@
       S.data.updatedAt = updatedAt;
       setBase(canon(S.data), newCommit.sha);
       saveDraft();
-      // 圖片已經在 GitHub 上了，清掉暫存（畫面上繼續用瀏覽器裡的版本，等網站更新）
-      for (const path of pending.keys()) await idb.del(path).catch(() => {});
+      // 圖片已經在 GitHub 上了：用不到的暫存直接刪，剛上傳的多留 10 分鐘，等網站更新好
+      for (const [path, blob] of pending) {
+        if (used.has(path)) await idb.put({ path, blob, publishedAt: Date.now() }).catch(() => {});
+        else await idb.del(path).catch(() => {});
+      }
       return { updatedAt, uploaded: toUpload.length };
     }
     throw Object.assign(new Error("retry"), { status: 409 });

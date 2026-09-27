@@ -31,8 +31,8 @@ body { margin: 0; font-family: var(--font); background: var(--paper); color: var
 img { max-width: 100%; display: block; }
 a { color: var(--navy); }
 button { font-family: inherit; cursor: pointer; }
-h1, h2, h3 { margin: 0; line-height: 1.25; }
-p { margin: 0 0 1em; }
+h1, h2, h3 { margin: 0; line-height: 1.25; word-break: keep-all; overflow-wrap: break-word; text-wrap: balance; }
+p { margin: 0 0 1em; text-wrap: pretty; }
 :focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
 [hidden] { display: none !important; }
 .wrap { width: min(100% - 2.5rem, 1160px); margin-inline: auto; }
