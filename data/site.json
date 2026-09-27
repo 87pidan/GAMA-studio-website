@@ -1,0 +1,682 @@
+{
+  "updatedAt": "2026-09-27T16:59:33.594Z",
+  "studio": {
+    "name": "善武工作室",
+    "intro": "我們做 GTA V 的台灣警車：Outlander、Camry，塗裝照台灣現役警車做，車牌、縣市、分局編號免費幫你改。看上哪台，到 Discord 開服務單就好。",
+    "otherDesc": "除了車以外，也有警用制服、插件中文翻譯、FiveM 插件。需要的一起開單問。",
+    "orderNote": "採優先付款後交貨",
+    "pricingNote": "本工作室商品提供免費代裝服務，其餘服務及價格如下",
+    "contactText": "購買或詢問都在 Discord 開服務單，會有客服人員處理。目前只接受轉帳。",
+    "discord": "https://discord.gg/wtJyScvXVB"
+  },
+  "categories": [
+    {
+      "id": "vehicle",
+      "label": "台灣警車",
+      "desc": "收取的是警燈與警用塗裝的製作費，不是販售原車。目前僅有 replace 版本。",
+      "showcase": true
+    },
+    {
+      "id": "eup",
+      "label": "EUP 警用服飾",
+      "desc": "內部均有安裝教學，怕太複雜也可以免費代裝。",
+      "showcase": false
+    },
+    {
+      "id": "plugin",
+      "label": "警用插件中文翻譯",
+      "desc": "收取的是翻譯手工費，不是販售原插件，原插件要自己先下載。左上角字體無法正常顯示，其餘正常。",
+      "showcase": false
+    },
+    {
+      "id": "fivem",
+      "label": "FiveM 插件",
+      "desc": "只供 FiveM 伺服器使用，ESX 架構、OX 系統 1.10 適用，QB / QBX 不可用。加密版與開源版兩種價格。",
+      "showcase": false
+    },
+    {
+      "id": "free",
+      "label": "免費區",
+      "desc": "免費釋出，直接拿去用。",
+      "showcase": false
+    }
+  ],
+  "products": [
+    {
+      "id": "outlander-2018",
+      "name": "Mitsubishi Outlander 2018 警車",
+      "category": "vehicle",
+      "hidden": false,
+      "badge": "主打",
+      "tagline": "台灣警用黑白塗裝，車牌、縣市、分局編號免費自訂。",
+      "price": 350,
+      "priceText": "",
+      "unit": "輛",
+      "images": [
+        "assets/img/dc/outlander-1.jpg",
+        "assets/img/dc/outlander-2.jpg",
+        "assets/img/dc/outlander-3.jpg",
+        "assets/img/dc/outlander-4.jpg",
+        "assets/img/dc/outlander-5.jpg",
+        "assets/img/dc/outlander-6.jpg"
+      ],
+      "video": "",
+      "features": [
+        "免費車牌、縣市、分局編號自訂",
+        "警燈與警用塗裝",
+        "replace 版本"
+      ],
+      "details": [],
+      "notes": [
+        "收取費用為警燈、更改為警用塗裝之費用，非販售原車輛。",
+        "僅有 replace。"
+      ]
+    },
+    {
+      "id": "camry-2021",
+      "name": "Toyota Camry 2021 警車",
+      "category": "vehicle",
+      "hidden": false,
+      "badge": "",
+      "tagline": "台灣警用黑白塗裝，車牌、縣市、分局編號免費自訂。",
+      "price": 350,
+      "priceText": "",
+      "unit": "輛",
+      "images": [
+        "assets/img/dc/camry-1.jpg",
+        "assets/img/dc/camry-2.jpg",
+        "assets/img/dc/camry-3.jpg",
+        "assets/img/dc/camry-4.jpg",
+        "assets/img/dc/camry-5.jpg",
+        "assets/img/dc/camry-6.jpg"
+      ],
+      "video": "",
+      "features": [
+        "免費車牌、縣市、分局編號自訂",
+        "警燈與警用塗裝",
+        "replace 版本"
+      ],
+      "details": [],
+      "notes": [
+        "收取費用為警燈、更改為警用塗裝之費用，非販售原車輛。",
+        "僅有 replace。"
+      ]
+    },
+    {
+      "id": "eup-uniform",
+      "name": "警用制服",
+      "category": "eup",
+      "hidden": false,
+      "badge": "",
+      "tagline": "每個縣市 32 件制服，全台縣市臂章都有，男女、長短袖皆有。",
+      "price": 200,
+      "priceText": "",
+      "unit": "套",
+      "images": [
+        "assets/img/dc/eup-uniform-1.jpg",
+        "assets/img/dc/eup-uniform-2.jpg",
+        "assets/img/dc/eup-uniform-f-1.jpg",
+        "assets/img/dc/eup-uniform-f-2.jpg",
+        "assets/img/dc/eup-uniform-f-3.jpg",
+        "assets/img/dc/eup-uniform-f-4.jpg"
+      ],
+      "video": "",
+      "features": [
+        "長短袖",
+        "一線三 ～ 兩線三制服",
+        "交通制服",
+        "國道制服",
+        "保一總隊霹靂小組 ～ 保七總隊霹靂小組制服",
+        "警用長褲",
+        "消防防火服、消防制服",
+        "警用安全帽",
+        "UB 設定及翻譯"
+      ],
+      "details": [
+        "每個縣市有 32 件制服。內部均有安裝教學，如果擔心安裝教學太複雜，我們也有提供免費代裝服務。"
+      ],
+      "notes": [
+        "全台灣的縣市臂章都有、男女皆有、長短皆有。",
+        "女版與男版的長袖與短袖制服皆有。"
+      ]
+    },
+    {
+      "id": "eup-vest",
+      "name": "防彈衣及背心",
+      "category": "eup",
+      "hidden": false,
+      "badge": "",
+      "tagline": "13 件防彈衣，附安裝教學。",
+      "price": 120,
+      "priceText": "",
+      "unit": "套",
+      "images": [
+        "assets/img/dc/eup-vest-1.jpg",
+        "assets/img/dc/eup-vest-2.jpg",
+        "assets/img/dc/eup-vest-f-1.jpg",
+        "assets/img/dc/eup-vest-f-2.jpg",
+        "assets/img/dc/eup-vest-f-3.jpg",
+        "assets/img/dc/eup-vest-f-4.jpg"
+      ],
+      "video": "",
+      "features": [
+        "13 件防彈衣",
+        "1 份安裝教學"
+      ],
+      "details": [
+        "內部均有安裝教學，如果擔心安裝教學太複雜，我們也有提供免費代裝服務。"
+      ],
+      "notes": [
+        "僅有男版防彈衣。"
+      ]
+    },
+    {
+      "id": "zh-lspdfr",
+      "name": "LSPDFR 核心中文翻譯",
+      "category": "plugin",
+      "hidden": false,
+      "badge": "",
+      "tagline": "LSPDFR 核心 + F4 修改器中文翻譯，附安裝教學。",
+      "price": 60,
+      "priceText": "",
+      "unit": "份",
+      "images": [
+        "assets/img/dc/plug-lspdfr-4.jpg",
+        "assets/img/dc/plug-lspdfr-1.jpg",
+        "assets/img/dc/plug-lspdfr-2.jpg",
+        "assets/img/dc/plug-lspdfr-3.jpg"
+      ],
+      "video": "",
+      "features": [
+        "LSPDFR 核心中文翻譯",
+        "F4 修改器中文翻譯",
+        "安裝教學"
+      ],
+      "details": [
+        "內部均有安裝教學，如果擔心安裝教學太複雜，我們也有提供免費代裝服務。"
+      ],
+      "notes": [
+        "原檔案為 LSPDFR（lcpdfr.com）與 Script Hook V（dev-c.com），必須先下載才能裝中文翻譯。",
+        "收取費用為翻譯的手工費用，並非販售原插件。",
+        "左上角字體無法正常顯示，其餘正常。"
+      ]
+    },
+    {
+      "id": "zh-stp",
+      "name": "Stop The Ped 中文翻譯",
+      "category": "plugin",
+      "hidden": false,
+      "badge": "",
+      "tagline": "攔停選單、市民對話全部中文，附安裝教學。",
+      "price": 60,
+      "priceText": "",
+      "unit": "份",
+      "images": [
+        "assets/img/dc/plug-stp-1.jpg",
+        "assets/img/dc/plug-stp-2.jpg",
+        "assets/img/dc/plug-stp-3.jpg",
+        "assets/img/dc/plug-stp-4.jpg"
+      ],
+      "video": "",
+      "features": [
+        "Stop The Ped 中文翻譯",
+        "安裝教學"
+      ],
+      "details": [
+        "內部均有安裝教學，如果擔心安裝教學太複雜，我們也有提供免費代裝服務。"
+      ],
+      "notes": [
+        "原檔案為 Stop The Ped（bejoijo.com），必須先下載才能裝中文翻譯。",
+        "收取費用為翻譯的手工費用，並非販售原插件。",
+        "左上角字體無法正常顯示，其餘正常。"
+      ]
+    },
+    {
+      "id": "zh-grammarpolice",
+      "name": "GrammarPolice 手持無線電中文翻譯",
+      "category": "plugin",
+      "hidden": false,
+      "badge": "",
+      "tagline": "無線電介面中文化，連圖片檔一起改。",
+      "price": 30,
+      "priceText": "",
+      "unit": "份",
+      "images": [
+        "assets/img/dc/plug-grammar-1.jpg",
+        "assets/img/dc/plug-grammar-2.jpg",
+        "assets/img/dc/plug-grammar-3.jpg",
+        "assets/img/dc/plug-grammar-4.jpg"
+      ],
+      "video": "",
+      "features": [
+        "GrammarPolice 手持無線電中文翻譯",
+        "安裝教學"
+      ],
+      "details": [
+        "內部均有安裝教學，如果擔心安裝教學太複雜，我們也有提供免費代裝服務。"
+      ],
+      "notes": [
+        "原檔案為 GrammarPolice（lcpdfr.com），必須先下載才能裝中文翻譯。",
+        "收取費用為翻譯及更改圖片檔的手工費用，並非販售原插件。"
+      ]
+    },
+    {
+      "id": "zh-ultimate-backup",
+      "name": "Ultimate Backup 中文翻譯",
+      "category": "plugin",
+      "hidden": false,
+      "badge": "",
+      "tagline": "支援選單中文化，附安裝教學。",
+      "price": 20,
+      "priceText": "",
+      "unit": "份",
+      "images": [
+        "assets/img/dc/plug-ub-1.jpg",
+        "assets/img/dc/plug-ub-2.jpg",
+        "assets/img/dc/plug-ub-3.jpg",
+        "assets/img/dc/plug-ub-4.jpg"
+      ],
+      "video": "",
+      "features": [
+        "Ultimate Backup 中文翻譯",
+        "安裝教學"
+      ],
+      "details": [
+        "內部均有安裝教學，如果擔心安裝教學太複雜，我們也有提供免費代裝服務。"
+      ],
+      "notes": [
+        "原檔案為 Ultimate Backup（bejoijo.com），必須先下載才能裝中文翻譯。",
+        "收取費用為翻譯的手工費用，並非販售原插件。",
+        "左上角字體無法正常顯示，其餘正常。"
+      ]
+    },
+    {
+      "id": "zh-compulite",
+      "name": "CompuLite 中文翻譯",
+      "category": "plugin",
+      "hidden": false,
+      "badge": "",
+      "tagline": "警用查詢系統中文化，附安裝教學。",
+      "price": 20,
+      "priceText": "",
+      "unit": "份",
+      "images": [
+        "assets/img/dc/plug-compulite-1.jpg",
+        "assets/img/dc/plug-compulite-2.jpg",
+        "assets/img/dc/plug-compulite-3.jpg",
+        "assets/img/dc/plug-compulite-4.jpg"
+      ],
+      "video": "",
+      "features": [
+        "CompuLite 中文翻譯",
+        "安裝教學"
+      ],
+      "details": [
+        "內部均有安裝教學，如果擔心安裝教學太複雜，我們也有提供免費代裝服務。"
+      ],
+      "notes": [
+        "原檔案為 CompuLite（bejoijo.com），必須先下載才能裝中文翻譯。",
+        "收取費用為翻譯的手工費用，並非販售原插件。",
+        "左上角字體無法正常顯示，其餘正常。"
+      ]
+    },
+    {
+      "id": "siren-pack",
+      "name": "警笛包",
+      "category": "plugin",
+      "hidden": false,
+      "badge": "",
+      "tagline": "警車、警用機車、消防車、救護車警笛喇叭，含 ELS 設定檔。",
+      "price": 80,
+      "priceText": "",
+      "unit": "包",
+      "images": [],
+      "video": "https://youtu.be/PngJy2MBmBA",
+      "features": [
+        "警笛包",
+        "ELS 設定檔",
+        "安裝教學"
+      ],
+      "details": [
+        "內部均有安裝教學，如果擔心安裝教學太複雜，我們也有提供免費代裝服務。"
+      ],
+      "notes": [
+        "此警笛包包含警車、警用機車、消防車、救護車警笛喇叭。"
+      ]
+    },
+    {
+      "id": "fivem-objection",
+      "name": "台灣臨檢異議單插件",
+      "category": "fivem",
+      "hidden": false,
+      "badge": "",
+      "tagline": "在遊戲內給玩家使用異議單，含 DC 後台。",
+      "price": null,
+      "priceText": "加密 700 / 開源 1200",
+      "unit": "",
+      "images": [
+        "assets/img/dc/fivem-objection-1.jpg",
+        "assets/img/dc/fivem-objection-2.jpg",
+        "assets/img/dc/fivem-objection-3.jpg"
+      ],
+      "video": "",
+      "features": [
+        "OX 系統，1.10 適用",
+        "含 DC 後台",
+        "須圖片可提供"
+      ],
+      "details": [],
+      "notes": [
+        "此插件是 ESX 架構，QB 或 QBX 不可用。"
+      ]
+    },
+    {
+      "id": "fivem-good-citizen",
+      "name": "台灣良民證申請",
+      "category": "fivem",
+      "hidden": false,
+      "badge": "",
+      "tagline": "玩家可申請良民證，其他市民也看得到，含 DC 後台。",
+      "price": null,
+      "priceText": "加密 700 / 開源 1200",
+      "unit": "",
+      "images": [
+        "assets/img/dc/fivem-goodcitizen-1.jpg"
+      ],
+      "video": "",
+      "features": [
+        "OX 系統，1.10 適用",
+        "含 DC 後台",
+        "須圖片可提供"
+      ],
+      "details": [],
+      "notes": [
+        "此插件是 ESX 架構，QB 或 QBX 不可用。"
+      ]
+    },
+    {
+      "id": "fivem-rent",
+      "name": "租房系統",
+      "category": "fivem",
+      "hidden": false,
+      "badge": "",
+      "tagline": "在遊戲內租房子，含 DC 後台。",
+      "price": null,
+      "priceText": "加密 700 / 開源 1300",
+      "unit": "",
+      "images": [
+        "assets/img/dc/fivem-rent-1.jpg"
+      ],
+      "video": "",
+      "features": [
+        "OX 系統，1.10 適用",
+        "含 DC 後台"
+      ],
+      "details": [
+        "圖片為 Discord 展示影片的截圖。"
+      ],
+      "notes": [
+        "此插件是 ESX 架構，QB 或 QBX 不可用。"
+      ]
+    },
+    {
+      "id": "fivem-admin-panel",
+      "name": "管理面板",
+      "category": "fivem",
+      "hidden": false,
+      "badge": "",
+      "tagline": "可自訂一按鍵，自帶天氣同步、換衣服選單等。",
+      "price": null,
+      "priceText": "加密 700 / 開源 1600",
+      "unit": "",
+      "images": [
+        "assets/img/dc/fivem-admin-panel-1.jpg"
+      ],
+      "video": "",
+      "features": [
+        "OX 系統，1.10 適用",
+        "天氣同步系統",
+        "換衣服選單"
+      ],
+      "details": [
+        "圖片為 Discord 展示影片的截圖。"
+      ],
+      "notes": [
+        "此插件是 ESX 架構，QB 或 QBX 不可用。"
+      ]
+    },
+    {
+      "id": "fivem-panic",
+      "name": "警員緊急按鈕",
+      "category": "fivem",
+      "hidden": false,
+      "badge": "",
+      "tagline": "警員手動啟用或倒地自動觸發警報。",
+      "price": null,
+      "priceText": "加密 200 / 開源 500",
+      "unit": "",
+      "images": [
+        "assets/img/dc/fivem-panic-1.jpg"
+      ],
+      "video": "",
+      "features": [
+        "OX 系統，1.10 適用",
+        "須圖片可提供"
+      ],
+      "details": [
+        "圖片為 Discord 展示影片的截圖。"
+      ],
+      "notes": [
+        "此插件是 ESX 架構，QB 或 QBX 不可用。"
+      ]
+    },
+    {
+      "id": "fivem-admin-help",
+      "name": "管理員求助",
+      "category": "fivem",
+      "hidden": false,
+      "badge": "",
+      "tagline": "打 /adminhelp 加上要說的字就好。",
+      "price": null,
+      "priceText": "加密 400 / 開源 700",
+      "unit": "",
+      "images": [
+        "assets/img/dc/fivem-adminhelp-1.jpg"
+      ],
+      "video": "",
+      "features": [
+        "/adminhelp 指令"
+      ],
+      "details": [],
+      "notes": []
+    },
+    {
+      "id": "fivem-job-map",
+      "name": "公職地圖定位系統",
+      "category": "fivem",
+      "hidden": false,
+      "badge": "",
+      "tagline": "定位上班玩家的座標，可新增職位。",
+      "price": null,
+      "priceText": "加密 300 / 開源 600",
+      "unit": "",
+      "images": [
+        "assets/img/dc/fivem-jobmap-1.jpg"
+      ],
+      "video": "",
+      "features": [
+        "定位上班玩家座標",
+        "需要新增職位座標可以新增"
+      ],
+      "details": [],
+      "notes": []
+    },
+    {
+      "id": "fivem-custom",
+      "name": "代寫插件",
+      "category": "fivem",
+      "hidden": false,
+      "badge": "",
+      "tagline": "需要寫插件的話，開工單詢問。",
+      "price": null,
+      "priceText": "",
+      "unit": "",
+      "images": [],
+      "video": "",
+      "features": [],
+      "details": [
+        "如果需要寫插件，請開工單作詢問。"
+      ],
+      "notes": []
+    },
+    {
+      "id": "free-core-install",
+      "name": "警察模組及核心插件代裝",
+      "category": "free",
+      "hidden": false,
+      "badge": "免費",
+      "tagline": "LSPDFR、Script Hook V、RageNativeUI 等核心，免費幫你裝。",
+      "price": 0,
+      "priceText": "",
+      "unit": "",
+      "images": [],
+      "video": "",
+      "features": [
+        "LSPD First Response",
+        "Script Hook V",
+        "RageNativeUI",
+        "HeapAdjuster",
+        "Packfile Limit Adjuster",
+        "gameconfig（300 cars）"
+      ],
+      "details": [
+        "若不了解如何安裝，歡迎開啟服務單，我們提供免費代裝警察模組及核心插件服務。目前版本 3889。"
+      ],
+      "notes": []
+    },
+    {
+      "id": "free-helmet",
+      "name": "安全帽不脫落插件",
+      "category": "free",
+      "hidden": false,
+      "badge": "免費",
+      "tagline": "戴著安全帽或帽子都不會自動脫掉。",
+      "price": 0,
+      "priceText": "",
+      "unit": "",
+      "images": [
+        "assets/img/dc/free-helmet-1.jpg",
+        "assets/img/dc/free-helmet-2.jpg"
+      ],
+      "video": "",
+      "features": [
+        "需要從 RAGEPluginHook 啟動此插件"
+      ],
+      "details": [
+        "到 Discord「免費釋出插件🆓」頻道下載。"
+      ],
+      "notes": []
+    },
+    {
+      "id": "free-taiwan-mdt",
+      "name": "台灣化車用電腦",
+      "category": "free",
+      "hidden": false,
+      "badge": "免費",
+      "tagline": "Callout Interface 的警用電腦面板與台灣車牌面板台灣化。",
+      "price": 0,
+      "priceText": "",
+      "unit": "",
+      "images": [],
+      "video": "",
+      "features": [
+        "台灣化 Callout Interface 警用電腦面板",
+        "台灣車牌面板",
+        "安裝教學已包含在檔案內"
+      ],
+      "details": [
+        "發佈在 LCPDFR.com，Discord「免費釋出插件🆓」頻道有連結。原模組為 Callout Interface。"
+      ],
+      "notes": []
+    }
+  ],
+  "howToBuy": [
+    "到 Discord 伺服器的「🛎️服務單🛎️」頻道，按「點我開啟服務單」。",
+    "客服人員會在服務單裡跟你確認商品與價格，對商品有疑慮也可以先在這裡問。",
+    "先付款後交貨，目前只接受轉帳。交貨後需要代裝的話直接在同一張單說。"
+  ],
+  "priceList": [
+    {
+      "item": "警察模組及核心插件代裝",
+      "price": 0,
+      "unit": ""
+    },
+    {
+      "item": "插件代裝",
+      "price": 10,
+      "unit": "個"
+    },
+    {
+      "item": "車輛代裝",
+      "price": 10,
+      "unit": "輛"
+    },
+    {
+      "item": "服飾代裝",
+      "price": 10,
+      "unit": "件"
+    },
+    {
+      "item": "武器代裝",
+      "price": 15,
+      "unit": "把"
+    },
+    {
+      "item": "警笛包代裝",
+      "price": 20,
+      "unit": "包"
+    },
+    {
+      "item": "警笛更改",
+      "price": 50,
+      "unit": "個"
+    },
+    {
+      "item": "塗裝更改",
+      "price": 50,
+      "unit": "張"
+    },
+    {
+      "item": "車輛修復",
+      "price": 10,
+      "unit": "個"
+    },
+    {
+      "item": "崩潰修復",
+      "price": 30,
+      "unit": "個"
+    }
+  ],
+  "faq": [
+    {
+      "q": "怎麼買？",
+      "a": "到 Discord 的「🛎️服務單🛎️」頻道按「點我開啟服務單」，客服會在單裡處理。先付款後交貨，目前只接受轉帳。"
+    },
+    {
+      "q": "完全不會裝可以嗎？",
+      "a": "可以。警察模組跟核心插件免費代裝，其他商品代裝費用看價目表。"
+    },
+    {
+      "q": "警車可以換分局、車號嗎？",
+      "a": "可以，車牌、縣市、分局編號都免費自訂。"
+    },
+    {
+      "q": "中文翻譯要先準備什麼？",
+      "a": "要先自己下載原插件（LSPDFR、Stop The Ped 等），我們賣的是翻譯檔，不是原插件。"
+    },
+    {
+      "q": "FiveM 插件可以退款嗎？",
+      "a": "已交付、架構不符、與其他插件衝突、不會安裝、功能不符合需求，都不退款。購買前請先確認伺服器架構。"
+    }
+  ]
+}

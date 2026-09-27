@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>網站後台 · 善武工作室</title>
+  <script>
+    // 網址少了最後的斜線時補上，不然圖片、樣式的相對路徑會錯
+    if (!/\/$|\.html$/.test(location.pathname)) location.replace(location.pathname + "/" + location.search + location.hash);
+  </script>
+  <link rel="icon" type="image/png" href="../assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="admin.css?v=1">
+</head>
+<body>
+  <header class="a-top" id="a-top" hidden>
+    <div class="a-wrap a-top-inner">
+      <a class="a-brand" href="#/products">
+        <img src="../assets/img/logo.png" alt="">
+        <span><b>善武工作室</b><small>網站後台</small></span>
+      </a>
+      <div class="a-status" id="a-status" aria-live="polite"></div>
+      <div class="a-top-actions">
+        <a class="a-btn" href="../" target="_blank" rel="noopener">看網站</a>
+        <a class="a-btn" id="btn-preview" href="../?preview=1" target="_blank" rel="noopener">預覽修改</a>
+        <button class="a-btn primary" id="btn-publish" type="button" disabled>發佈到網站</button>
+      </div>
+    </div>
+    <nav class="a-wrap a-tabs" id="a-tabs" aria-label="後台選單">
+      <a href="#/products" data-tab="products">商品</a>
+      <a href="#/categories" data-tab="categories">分類</a>
+      <a href="#/prices" data-tab="prices">價目表</a>
+      <a href="#/guide" data-tab="guide">購買方式與常見問題</a>
+      <a href="#/texts" data-tab="texts">網站文字</a>
+      <button type="button" class="a-logout" id="btn-logout">登出</button>
+    </nav>
+  </header>
+
+  <main class="a-wrap a-main" id="view">
+    <p class="a-loading">載入中…</p>
+  </main>
+
+  <div class="a-toast" id="a-toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="admin.js?v=1"></script>
+</body>
+</html>
